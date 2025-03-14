@@ -1,0 +1,23 @@
+{
+  "name": "@tma-monorepo/logger",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "dev": "tsc -w",
+    "test": "jest"
+  },
+  "dependencies": {
+    "pino": "^9.6.0",
+    "@tma-monorepo/config": "workspace:*"
+  },
+  "devDependencies": {
+    "pino-pretty": "^13.0.0",
+    "@types/jest": "^29.5.14",
+    "node-notifier": "^10.0.1",
+    "ts-jest": "^29.2.6",
+    "typescript": "^5.8.2"
+  }
+}
