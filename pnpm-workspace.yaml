@@ -1,0 +1,8 @@
+packages:
+  - src/libraries/*
+  - src/apps/*
+onlyBuiltDependencies:
+  - '@prisma/client'
+  - '@prisma/engines'
+  - esbuild
+  - prisma
