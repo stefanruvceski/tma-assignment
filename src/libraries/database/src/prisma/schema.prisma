@@ -1,0 +1,54 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DB_CONNECTION_STRING")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum LimitPeriod {
+  CALENDAR_DAY
+  CALENDAR_WEEK
+  CALENDAR_MONTH
+  DAY
+  INDEFINITE
+  INSTANCE
+  WEEK
+  MONTH
+}
+
+enum LimitStatus {
+  ACTIVE
+  CANCELED
+  FUTURE
+  IN_COOLDOWN
+}
+
+enum LimitType {
+  BALANCE
+  BET
+  DEPOSIT
+  LOSS
+  SESSION
+}
+
+model UserLimit {
+  userLimitId        String       @id @default(uuid()) @map("_id")
+  activeFrom         BigInt     
+  activeUntil        BigInt?    
+  brandId            String       
+  createdAt          BigInt?    
+  currencyCode       String       
+  nextResetTime      BigInt?    
+  period             LimitPeriod  
+  previousLimitValue String?      
+  progress           String?      @default("0") 
+  status             LimitStatus  
+  type               LimitType    
+  userId             String       
+  value              String       
+
+  @@index([userId])
+  @@index([brandId])
+}

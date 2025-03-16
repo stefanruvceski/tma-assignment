@@ -1,0 +1,29 @@
+{
+  "name": "@tma-monorepo/database",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "pnpm prisma:generate && tsc",
+    "clean": "rimraf dist",
+    "dev": "tsc -w",
+    "test": "jest",
+    "db:push": "NODE_OPTIONS='-r dotenv/config' DOTENV_CONFIG_PATH=$(realpath ../../../.env) prisma db push --schema=src/prisma/schema.prisma",
+    "prisma:generate": "NODE_OPTIONS='-r dotenv/config' DOTENV_CONFIG_PATH=$(realpath ../../../.env) prisma generate --schema src/prisma/schema.prisma",
+    "db:studio": "NODE_OPTIONS='-r dotenv/config' DOTENV_CONFIG_PATH=$(realpath ../../../.env) prisma studio --schema src/prisma/schema.prisma",
+    "db:reset": "NODE_OPTIONS='-r dotenv/config' DOTENV_CONFIG_PATH=$(realpath ../../../.env) prisma migrate reset --schema src/prisma/schema.prisma "
+  },
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "@tma-monorepo/config": "workspace:*",
+    "@tma-monorepo/logger": "workspace:*",
+    "@tma-monorepo/error-handling": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "dotenv": "^16.0.0",
+    "prisma": "^6.4.1",
+    "ts-jest": "^29.2.6",
+    "typescript": "^5.8.2"
+  }
+}

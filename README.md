@@ -11,7 +11,7 @@ TMA Monorepo is a project that demonstrates the implementation of a microservice
 - [x] [TMA-03] Implement config library and test it
 - [x] [TMA-04] Implement logger library and test it
 - [x] [TMA-05] Implement error-handling library and test it
-- [ ] [TMA-06] Implement database library and test it
+- [x] [TMA-06] Implement database library and test it
 - [ ] [TMA-07] Implement event-stream library and test it
 - [ ] [TMA-08] Implement user-limit-service and test it
   - [ ] [TMA-09] Add data-access layer
