@@ -3,6 +3,7 @@ import * as dotenvExpand from 'dotenv-expand';
 import { resolve } from 'path';
 import { EnvType, Config } from './types/config-types';
 
+// Config provider for services
 export default class ConfigProvider {
   #env: EnvType;
   #config: Config;
@@ -11,6 +12,7 @@ export default class ConfigProvider {
     this.#config = this.#getConfig();
   }
 
+  // Load environment variables and override with service specific variables
   #loadEnv(serviceName?: string): EnvType {
     const rootEnv = dotenv.config({
       path: resolve(process.cwd(), '../../../.env'),

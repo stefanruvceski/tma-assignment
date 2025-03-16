@@ -5,6 +5,8 @@ import AJV from 'ajv';
 import { UserLimit } from '@tma-monorepo/database';
 
 const ajv = new AJV();
+
+// Validate new user limit event data
 export function assertNewUserLimitIsValid(newUserLimitRequest: UserLimit) {
   let validationSchema!: ValidateFunction<typeof userLimitSchema> | undefined;
   validationSchema = ajv.getSchema<typeof userLimitSchema>('new-user-limit');

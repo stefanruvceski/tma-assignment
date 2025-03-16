@@ -203,6 +203,9 @@ pnpm --filter user-limit-service test
   - [x] [TMA-11] Add tests for service classes
 - [x] [TMA-12] Implement simulator - adding events from events.json to kinesislite stream
 - [x] [TMA-13] Create README file for easier project setup and testing
+- [x] [TMA-14] fix small bugs
+- [x] [TMA-15] add comments for easier code understanding
+- [ ] [TMA-16] Answer Questions from PDF assignment
 
 ## Future Add-ons
 

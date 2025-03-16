@@ -5,6 +5,7 @@ import {
   IEventStreamAdapter,
 } from './interfaces/event-stream-adapter.interface';
 
+// Create event handler for different event stream adapters - easily extendable
 const createEventHandler = (adapterType: AdapterType): IEventStreamAdapter => {
   switch (adapterType) {
     case AdapterType.KINESIS:

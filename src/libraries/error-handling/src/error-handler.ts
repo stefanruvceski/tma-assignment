@@ -3,6 +3,7 @@ import * as Http from 'http';
 import { AppError } from './app-error';
 let httpServerRef: Http.Server;
 
+// Error handler for the application
 export const errorHandler = {
   // Listen to the global process-level error events
   listenToErrorEvents: (httpServer: Http.Server) => {
@@ -30,6 +31,7 @@ export const errorHandler = {
     });
   },
 
+  // Centralized error handling
   handleError: (errorToHandle: unknown): number => {
     try {
       logger.info('Handling error');

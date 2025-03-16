@@ -3,10 +3,11 @@ import { AppError, errorHandler } from '@tma-monorepo/error-handling';
 import { startWebServer } from './entry-points/api/server';
 
 async function start() {
-  // 🦉 Array of entry point is being used to support more entry-points kinds like message queue, scheduled job,
+  // Array of entry point is being used to support more entry-points kinds like message queue, scheduled job,
   return Promise.all([startWebServer()]);
 }
 
+// Start Express server for user limit reading
 start()
   .then((startResponses) => {
     logger.info(

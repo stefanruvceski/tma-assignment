@@ -1,6 +1,10 @@
 import { Logger, LoggerConfiguration } from '../types';
 import PinoLogger from './pino.adapter';
 
+// Logger wrapper for the application
+// This is a wrapper around the PinoLogger or any other logger that implements the Logger interface
+// It provides a more user-friendly interface for the application
+
 class LoggerWrapper implements Logger {
   #underlyingLogger: Logger | undefined;
 

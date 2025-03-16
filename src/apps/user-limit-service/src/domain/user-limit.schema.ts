@@ -23,21 +23,3 @@ export const userLimitSchema = Type.Object({
   userLimitId: Type.Optional(Type.String()),
   value: Type.String(),
 });
-
-// // Type definition for TypeScript
-// export type UserLimitDTO = {
-//   activeFrom: bigint;
-//   activeUntil?: bigint;
-//   brandId: string;
-//   createdAt?: bigint;
-//   currencyCode: string;
-//   nextResetTime?: bigint;
-//   period: LimitPeriod;
-//   previousLimitValue?: string;
-//   progress?: string;
-//   status: LimitStatus;
-//   type: LimitType;
-//   userId: string;
-//   userLimitId: string;
-//   value: string;
-// };

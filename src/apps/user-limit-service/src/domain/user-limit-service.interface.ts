@@ -1,5 +1,6 @@
 import { UserLimit } from '@tma-monorepo/database';
 
+// User limit service interface
 export interface IUserLimitService {
   addUserLimit(newUserLimit: UserLimit): Promise<UserLimit>;
   deleteUserLimit(userLimitId: string): Promise<UserLimit>;

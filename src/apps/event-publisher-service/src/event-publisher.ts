@@ -5,6 +5,7 @@ import { Event } from './event.interface';
 import { logger } from '@tma-monorepo/logger';
 import { AppError } from '@tma-monorepo/error-handling';
 
+// Simulate events from events.json to kinesisLite stream
 const publishEvents = async (): Promise<void> => {
   const config = new ConfigProvider('event-publisher-service');
   const streamName = config.getValue(configKey.aws_stream_name) as string;

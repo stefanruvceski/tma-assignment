@@ -1,5 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 
+// Abstract base class for database entities with common methods
+// Schema is being passed as a generic type to ensure type safety
+// Schema defined in prisma schema
 export abstract class DbEntity<T> {
   #prisma: PrismaClient;
 

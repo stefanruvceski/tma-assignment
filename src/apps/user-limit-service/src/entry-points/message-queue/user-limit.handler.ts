@@ -10,15 +10,14 @@ import { logger } from '@tma-monorepo/logger';
 import ConfigProvider, { configKey } from '@tma-monorepo/config';
 
 const config = new ConfigProvider('user-limit-service');
+
+// Process records from kinesisLite stream
 const processRecords = async (
   userLimitExecutor: UserLimitCommandExecutor,
   records: any[]
 ) => {
-  let count = 0;
   for (const record of records) {
     try {
-      logger.info(`${++count}/${records.length}`);
-
       await handleEvent(userLimitExecutor, record);
     } catch (error) {
       errorHandler.handleError(error);

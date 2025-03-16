@@ -25,6 +25,7 @@ const kinesisConfig: KinesisClientConfig = {
   requestHandler: new NodeHttpHandler(),
 };
 
+// Kinesis adapter for event stream
 export default class KinesisAdapter implements IEventStreamAdapter {
   private client: KinesisClient;
   constructor() {
