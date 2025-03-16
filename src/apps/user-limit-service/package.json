@@ -1,0 +1,32 @@
+{
+  "name": "@tma-monorepo/user-limit-service",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev-queue": "ts-node-dev --respawn src/index.ts",
+    "dev-api": "ts-node-dev --respawn src/start.ts",
+    "start": "node dist/src/index.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.30",
+    "@tma-monorepo/config": "workspace:*",
+    "@tma-monorepo/database": "workspace:*",
+    "@tma-monorepo/error-handling": "workspace:*",
+    "@tma-monorepo/event-stream": "workspace:*",
+    "@tma-monorepo/logger": "workspace:*",
+    "ajv": "^8.17.1",
+    "axios": "^1.8.3",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.6",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
+  }
+}
