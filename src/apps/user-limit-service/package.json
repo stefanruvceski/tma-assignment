@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "clean": "rimraf dist",
+    "dev": "ts-node-dev --respawn src/index.ts",
     "dev-queue": "ts-node-dev --respawn src/index.ts",
     "dev-api": "ts-node-dev --respawn src/start.ts",
     "start": "node dist/src/index.ts",

@@ -112,7 +112,13 @@ AWS_REGION=us-east-1
 AWS_STREAM_NAME=test-stream
 ```
 
-### 4. Database Setup
+### 4. Build Packages
+
+```bash
+pnpm build
+```
+
+### 5. Database Setup
 
 If you're using MongoDB Atlas:
 
@@ -125,7 +131,7 @@ If you're using a local MongoDB instance:
 1. Run MongoDB locally
 2. Set the connection string in the `.env` file (e.g., `mongodb://localhost:27017/tma-db`)
 
-### 5. Generate Prisma Client
+### 6. Generate Prisma Client
 
 ```bash
 cd src/libraries/database
@@ -133,7 +139,7 @@ pnpm prisma:generate
 pnpm db:push
 ```
 
-### 6. Install kinesisLite and run it in your terminal (it will run on http://localhost:4567)
+### 7. Install kinesisLite and run it in your terminal (it will run on http://localhost:4567)
 
 ```bash
 npm install kinesalite && kinesalite
