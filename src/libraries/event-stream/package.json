@@ -1,0 +1,25 @@
+{
+  "name": "@tma-monorepo/event-stream",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "dev": "tsc -w",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@tma-monorepo/logger": "workspace:*",
+    "@tma-monorepo/config": "workspace:*",
+    "@tma-monorepo/error-handling": "workspace:*",
+    "@aws-sdk/client-kinesis": "^3.758.0",
+    "@smithy/node-http-handler": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "node-notifier": "^10.0.1",
+    "ts-jest": "^29.2.6",
+    "typescript": "^5.8.2"
+  }
+}
