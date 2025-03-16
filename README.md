@@ -18,5 +18,5 @@ TMA Monorepo is a project that demonstrates the implementation of a microservice
   - [x] [TMA-09] Add domain layer - service logic and validators
   - [x] [TMA-10] Add entry-points layer - API routes and event-stream handler
   - [x] [TMA-11] Add tests for service classes
-- [ ] [TMA-12] Implement simulator - adding events from events.json to kinesislite stream
+- [x] [TMA-12] Implement simulator - adding events from events.json to kinesislite stream
 - [ ] [TMA-13] Create README file for easier project setup and testing

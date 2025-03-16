@@ -18,6 +18,40 @@ importers:
         specifier: ^5.8.2
         version: 5.8.2
 
+  src/apps/event-publisher-service:
+    dependencies:
+      '@tma-monorepo/config':
+        specifier: workspace:*
+        version: link:../../libraries/config
+      '@tma-monorepo/database':
+        specifier: workspace:*
+        version: link:../../libraries/database
+      '@tma-monorepo/error-handling':
+        specifier: workspace:*
+        version: link:../../libraries/error-handling
+      '@tma-monorepo/event-stream':
+        specifier: workspace:*
+        version: link:../../libraries/event-stream
+      '@tma-monorepo/logger':
+        specifier: workspace:*
+        version: link:../../libraries/logger
+    devDependencies:
+      '@types/jest':
+        specifier: ^29.5.14
+        version: 29.5.14
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.17.24
+      ts-jest:
+        specifier: ^29.2.6
+        version: 29.2.6(@babel/core@7.26.10)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.10))(jest@29.7.0(@types/node@20.17.24)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.17.24)(typescript@5.8.2)))(typescript@5.8.2)
+      ts-node-dev:
+        specifier: ^2.0.0
+        version: 2.0.0(@types/node@20.17.24)(node-notifier@10.0.1)(typescript@5.8.2)
+      typescript:
+        specifier: ^5.8.2
+        version: 5.8.2
+
   src/apps/user-limit-service:
     dependencies:
       '@sinclair/typebox':
@@ -3704,15 +3738,15 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 20.17.24
+      '@types/node': 22.13.10
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 20.17.24
+      '@types/node': 22.13.10
 
   '@types/express-serve-static-core@5.0.6':
     dependencies:
-      '@types/node': 20.17.24
+      '@types/node': 22.13.10
       '@types/qs': 6.9.18
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -3762,12 +3796,12 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 20.17.24
+      '@types/node': 22.13.10
 
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 20.17.24
+      '@types/node': 22.13.10
       '@types/send': 0.17.4
 
   '@types/stack-utils@2.0.3': {}

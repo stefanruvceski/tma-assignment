@@ -1,0 +1,23 @@
+{
+  "name": "@tma-monorepo/test-service",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "start": "node dist/src/index.ts"
+  },
+  "dependencies": {
+    "@tma-monorepo/config": "workspace:*",
+    "@tma-monorepo/logger": "workspace:*",
+    "@tma-monorepo/error-handling": "workspace:*",
+    "@tma-monorepo/database": "workspace:*",
+    "@tma-monorepo/event-stream": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2",
+    "ts-jest": "^29.2.6"
+  }
+}
